@@ -1,7 +1,9 @@
 import 'bank_account.dart';
+import 'client.dart';
 
 class SavingsBankAccount extends BankAccount {
   double minimumBalance;
+  late Client owner;
 
   SavingsBankAccount({this.minimumBalance = 1000, double Balance = 1000})
       : super(Balance: Balance);
@@ -24,6 +26,12 @@ class SavingsBankAccount extends BankAccount {
       return 0;
     }
     return super.deposit(amount);
+  }
+
+@override
+  void view() {
+    print('minimum balance: $minimumBalance');
+    super.view();
   }
   
 }

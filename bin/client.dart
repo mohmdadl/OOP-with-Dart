@@ -7,5 +7,11 @@ class Client{
   late BankAccount myAccount;
 
   Client({required this.phone,required this.name,required this.address});
-  
+
+  void view(){
+    print('Name: $name');
+    print('Address: $address');
+    print('Phone: $phone');
+  }
+
 }

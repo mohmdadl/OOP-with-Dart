@@ -15,13 +15,15 @@ class BankAccount {
     if (amount <= 0) {
       print('invalid value to withdraw');
       return 0;
-    } else if (amount >= Balance) {
+    } else if (amount <= Balance) {
       Balance -= amount;
       print('withdraw done Successfully');
       return Balance;
+    }else{
+      print('not sufficient balance');
+      return Balance;
     }
-    print('not sufficient balance');
-    return Balance;
+
   }
 
   double deposit(double amount) {
@@ -37,5 +39,6 @@ class BankAccount {
   void view(){
     print('Account ID: $ID');
     print('Account Balance: $Balance');
+    owner.view();
   }
 }
